@@ -1,7 +1,8 @@
 <template>
-	<div class="product-list">
-		{{products}}
-		<product-preview />
+	<div class="product-list" v-if="products">
+		<div v-for="product in products" :key="product.id">
+			<product-preview :product="product" />
+		</div>
 	</div>
 </template>
 
@@ -9,11 +10,12 @@
 import productPreview from './product-preview.vue';
 export default {
 	created() {
-		this.products = this.$store.getters.products
+		this.$store.dispatch({ type: 'loadProducts' })
 	},
-	data() {
-		return {
-			products: null
+
+	computed: {
+		products() {
+			return this.$store.getters.products
 		}
 	},
 

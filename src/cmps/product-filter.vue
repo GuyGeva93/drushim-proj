@@ -1,9 +1,9 @@
 <template>
 	<div class="header">
 		<el-input placeholder="Search" v-model="search" @input="searchProduct"></el-input>
-
 		<button>Search</button>
-		<el-select v-model="categoryValue" placeholder="Select">
+
+		<el-select v-model="categoryValue" placeholder="Select" @input="filter">
 			<el-option
 				v-for="category in categories"
 				:key="category.value"
@@ -12,6 +12,7 @@
 			>
 			</el-option>
 		</el-select>
+
 		<el-select v-model="sortByValue" placeholder="Select">
 			<el-option
 				v-for="option in sortBy"
@@ -68,7 +69,10 @@ export default {
   methods: {
     searchProduct() {
       console.log(this.search)
-    }
+    },
+		filter(){
+			this.$emit('filter', this.categoryValue)
+		}
   },
 
 }

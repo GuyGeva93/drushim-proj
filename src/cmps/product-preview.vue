@@ -1,9 +1,9 @@
 <template>
-	<div class="product-preview-container">
+	<div class="product-preview">
 		<img src="" />
-		<h2>Macbook Pro</h2>
-		<h3>$1,799</h3>
-		<span>Computers</span>
+		<h2>{{ product.name }}</h2>
+		<h3>${{ product.price }}</h3>
+		<span>{{ product.category.name }}</span>
 		<section class="product-edit">
 			<button>Edit</button>
 		</section>
@@ -12,6 +12,11 @@
 
 <script>
 export default {
+	props: {
+		product: {
+			type: Object,
+		},
+	},
 
 }
 </script>

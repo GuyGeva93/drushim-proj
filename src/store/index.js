@@ -17,26 +17,20 @@ export default new Vuex.Store({
   mutations: {
     setProducts(state, { products }) {
       state.products = products
+    },
+    setFilter(state, { filterBy }) {
+      state.filterBy = filterBy
     }
   },
   actions: {
-    async loadProducts({ commit, state }) {
+    loadProducts({ commit, state }) {
       try {
-        const products = await productService.query(state.filterBy)
+        const products = productService.query(state.filterBy)
         commit({ type: 'setProducts', products })
       } catch (err) {
         console.log('Cannot load products =>', err)
       }
     },
-    async loadCategories({ commit }) {
-      try {
-        const categories = await productService.getCategories()
-        commit({ type: 'setCategories' })
-      } catch (err) {
-        console.log('Cannot load categories =>', err)
-      }
-
-    }
   },
 
 })
