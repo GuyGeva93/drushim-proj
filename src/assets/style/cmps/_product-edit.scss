@@ -1,0 +1,39 @@
+
+.product-edit {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #3e3e3e;
+  right: 50%;
+  top: 50%;
+  width: 300px;
+  height: 200px;
+  gap: 20px;
+  transform: translate(50%, -40%);
+  border-radius: 20px;
+  padding: 0 20px;
+
+  span {
+    cursor: pointer;
+    border: 1px solid;
+    align-self: center;
+    width: 100px;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+
+  button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: 1px solid;
+    background-color: inherit;
+  }
+
+  input {
+    border-radius: 8px;
+    padding-inline-start: 5px;
+  }
+}

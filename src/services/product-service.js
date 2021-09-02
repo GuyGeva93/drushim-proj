@@ -1,14 +1,16 @@
 import { keyBy } from 'lodash'
 export const productService = {
   query,
-
 }
 
 const gProducts = _loadProducts()
 
 function query(filterBy = { txt: '', category: '', sortBy: '' }) {
-  const regex = new RegExp(filterBy.txt, 'i') //Ignore uppercase
-  let products = gProducts.filter(p => regex.test(p.name))
+  let products = gProducts
+  if (filterBy.txt){
+    const regex = new RegExp(filterBy.txt, 'i') //Ignore uppercase
+    products = gProducts.filter(p => regex.test(p.name))
+  }
   if (filterBy.category) {
     products = products.filter(p => p.category.name === filterBy.category)
   }
@@ -20,8 +22,6 @@ function query(filterBy = { txt: '', category: '', sortBy: '' }) {
       products = products.sort((a, b) => a.name.localeCompare(b.name))
     }
   }
-  // products = gProducts.filter(product => regex.test(product.category.name))
-  // products = gProducts.filter(product => regex.test(product.category.name))
   return products
 }
 

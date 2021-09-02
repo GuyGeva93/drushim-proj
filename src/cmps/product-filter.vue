@@ -1,11 +1,13 @@
 <template>
 	<div class="product-filter">
-		<el-input
-			class="product-filter-search"
-			placeholder="Search"
-			v-model="filterBy.txt"
-			@input="filter"
-		></el-input>
+		<section class="product-filter-search">
+			<el-input
+				placeholder="Search"
+				v-model="filterBy.txt"
+				@input="filter"
+			></el-input>
+		</section>
+
 		<section class="product-filter-drop-down">
 			<el-select v-model="filterBy.category" @input="filter">
 				<el-option
