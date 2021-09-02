@@ -5,11 +5,24 @@
   margin-bottom: 20px;
 
   .product-filter-search {
-    width: 200px;
+    color: #4e4e4e;
+    width: 250px;
   }
 
-  .product-filter-drop-down{
+  .product-filter-drop-down {
     display: flex;
+    gap: 10px;
+  }
+
+  input {
+    background-color: #4e4e4e;
+    color: white;
+  }
+}
+
+@include for-medium-layout {
+  .product-filter {
+    justify-content: center;
     gap: 10px;
   }
 }

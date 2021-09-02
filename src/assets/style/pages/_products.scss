@@ -1,8 +1,19 @@
 .products {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   display: grid;
-  grid-template-columns: 100px 1fr 100px;
-  grid-template-rows: 100px 1fr;
+  grid-template-columns: 170px 1fr 170px;
+  grid-template-rows: 80px 1fr;
+}
+
+@include for-medium-layout {
+  .products {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include for-mobile-layout {
+  .products {
+    display: flex;
+    flex-direction: column;
+  }
 }

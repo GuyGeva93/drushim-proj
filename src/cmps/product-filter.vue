@@ -46,7 +46,7 @@ export default {
 			categories: [
 				{
 					value: '',
-					label: 'All'
+					label: 'Categories'
 				},
 				{
 					value: 'Headphones',
@@ -64,7 +64,7 @@ export default {
 			sortBy: [
 				{
 					value: '',
-					label: 'Default'
+					label: 'Sort By'
 				},
 				{
 					value: 'Name',

@@ -1,7 +1,10 @@
+@import './break-points';
+
 @import './cmps/product-preview';
 @import './cmps/product-list';
 @import './cmps/product-filter';
 @import './pages/products';
+
 
 
 * {
@@ -9,7 +12,7 @@
 }
 
 body {
-  background-color: lightgrey;
+  background-color: #1e1e1e;
 }
 
 // h2, h3 {

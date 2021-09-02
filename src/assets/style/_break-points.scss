@@ -1,0 +1,19 @@
+$break-mobile: 760px;
+$break-small: 960px;
+$break-medium: 1310px;
+
+@mixin for-mobile-layout {
+  @media (max-width: $break-mobile) {
+    @content;
+  }
+}
+@mixin for-small-layout {
+  @media (max-width: $break-small) {
+    @content;
+  }
+}
+@mixin for-medium-layout {
+  @media (max-width: $break-medium) {
+    @content;
+  }
+}
