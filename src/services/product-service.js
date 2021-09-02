@@ -25,10 +25,6 @@ function query(filterBy = { txt: '', category: '', sortBy: '' }) {
   return products
 }
 
-function sortProducts() {
-
-}
-
 function _loadProducts() {
   const products = require('../data/products.json')
   const categories = require('../data/categories.json')
