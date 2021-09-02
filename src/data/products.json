@@ -4,104 +4,104 @@
     "categoryId": 1,
     "name": "Handcrafted Steel",
     "price": 162,
-    "image": "https://placehold.it/200x200/?text=4"
+    "image": "1.png"
   },
   {
     "id": 5,
     "categoryId": 1,
     "name": "Incredible Fresh",
     "price": 346,
-    "image": "https://placehold.it/200x200/?text=5"
+    "image": "2.png"
   },
   {
     "id": 6,
     "categoryId": 1,
     "name": "Fantastic Frozen",
     "price": 736,
-    "image": "https://placehold.it/200x200/?text=6"
+    "image": "3.png"
   },
   {
     "id": 7,
     "categoryId": 1,
     "name": "Sleek Concrete",
     "price": 860,
-    "image": "https://placehold.it/200x200/?text=7"
+    "image": "4.png"
   },
   {
     "id": 8,
     "categoryId": 1,
     "name": "Fantastic Cotton",
     "price": 892,
-    "image": "https://placehold.it/200x200/?text=8"
+    "image": "5.png"
   },
   {
     "id": 9,
     "categoryId": 2,
     "name": "Unbranded Cotton",
     "price": 617,
-    "image": "https://placehold.it/200x200/?text=9"
+    "image": "6.png"
   },
   {
     "id": 10,
     "categoryId": 2,
     "name": "Fantastic Fresh",
     "price": 636,
-    "image": "https://placehold.it/200x200/?text=10"
+    "image": "7.png"
   },
   {
     "id": 11,
     "categoryId": 2,
     "name": "Rustic Granite",
     "price": 507,
-    "image": "https://placehold.it/200x200/?text=11"
+    "image": "8.png"
   },
   {
     "id": 12,
     "categoryId": 2,
     "name": "Fantastic Rubber",
     "price": 169,
-    "image": "https://placehold.it/200x200/?text=12"
+    "image": "9.png"
   },
   {
     "id": 13,
     "categoryId": 2,
     "name": "Ergonomic Soft",
     "price": 880,
-    "image": "https://placehold.it/200x200/?text=13"
+    "image": "10.png"
   },
   {
     "id": 14,
     "categoryId": 3,
     "name": "Licensed Metal",
     "price": 748,
-    "image": "https://placehold.it/200x200/?text=14"
+    "image": "11.png"
   },
   {
     "id": 15,
     "categoryId": 3,
     "name": "Refined Metal",
     "price": 509,
-    "image": "https://placehold.it/200x200/?text=15"
+    "image": "12.png"
   },
   {
     "id": 16,
     "categoryId": 3,
     "name": "Sleek Concrete",
     "price": 0,
-    "image": "https://placehold.it/200x200/?text=16"
+    "image": "13.png"
   },
   {
     "id": 17,
     "categoryId": 3,
     "name": "Ergonomic Fresh",
     "price": 811,
-    "image": "https://placehold.it/200x200/?text=17"
+    "image": "14.png"
   },
   {
     "id": 18,
     "categoryId": 3,
     "name": "Licensed Fresh",
     "price": 510,
-    "image": "https://placehold.it/200x200/?text=18"
+    "image": "15.png"
   }
 ]

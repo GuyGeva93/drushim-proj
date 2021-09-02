@@ -3,5 +3,31 @@
   flex-direction: column;
   background-color: lightblue;
   border: 1px solid;
-  width: 200px;
+  width: 220px;
+  padding: 8px 0;
+
+  .product-preview-details {
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+  }
+  .product-preview-edit {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      border: none;
+      border-radius: 5px;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  img {
+    align-self: center;
+    width: 140px;
+    height: 120px;
+    // margin-top: 5px;
+  }
 }

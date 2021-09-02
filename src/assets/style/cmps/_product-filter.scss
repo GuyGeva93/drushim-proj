@@ -1,0 +1,15 @@
+.product-filter {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .product-filter-search {
+    width: 200px;
+  }
+
+  .product-filter-drop-down{
+    display: flex;
+    gap: 10px;
+  }
+}

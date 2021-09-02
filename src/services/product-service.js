@@ -7,11 +7,19 @@ export const productService = {
 const gProducts = _loadProducts()
 
 function query(filterBy = { txt: '', category: '', sortBy: '' }) {
-  console.log(filterBy)
   const regex = new RegExp(filterBy.txt, 'i') //Ignore uppercase
   let products = gProducts.filter(p => regex.test(p.name))
-  if (!filterBy.category) return products
-  products = products.filter(p => p.category.name === filterBy.category)
+  if (filterBy.category) {
+    products = products.filter(p => p.category.name === filterBy.category)
+  }
+  if (filterBy.sortBy) {
+    if (filterBy.sortBy === 'Price') {
+      products = products.sort((a, b) => a.price - b.price)
+    }
+    else if (filterBy.sortBy === 'Name') {
+      products = products.sort((a, b) => a.name.localeCompare(b.name))
+    }
+  }
   // products = gProducts.filter(product => regex.test(product.category.name))
   // products = gProducts.filter(product => regex.test(product.category.name))
   return products

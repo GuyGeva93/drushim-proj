@@ -1,5 +1,7 @@
 .product-list {
-  display: flex;
+  grid-column: 2;
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-evenly;
+  gap: 20px;
 }

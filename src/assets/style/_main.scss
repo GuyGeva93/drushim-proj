@@ -1,8 +1,15 @@
 @import './cmps/product-preview';
 @import './cmps/product-list';
+@import './cmps/product-filter';
+@import './pages/products';
+
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
 }
 
 // h2, h3 {

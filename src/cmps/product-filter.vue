@@ -1,35 +1,40 @@
 <template>
-	<div class="header">
-		<el-input placeholder="Search" v-model="filterBy.txt" @input="filter"></el-input>
-		<button>Search</button>
+	<div class="product-filter">
+		<el-input
+			class="product-filter-search"
+			placeholder="Search"
+			v-model="filterBy.txt"
+			@input="filter"
+		></el-input>
+		<section class="product-filter-drop-down">
+			<el-select v-model="filterBy.category" @input="filter">
+				<el-option
+					class="product-filter-category"
+					v-for="category in categories"
+					:key="category.value"
+					:label="category.label"
+					:value="category.value"
+				>
+				</el-option>
+			</el-select>
 
-		<el-select v-model="filterBy.category" placeholder="Select" @input="filter">
-			<el-option
-				v-for="category in categories"
-				:key="category.value"
-				:label="category.label"
-				:value="category.value"
-			>
-			</el-option>
-		</el-select>
-
-		<el-select v-model="filterBy.sortBy" placeholder="Sort By">
-			<el-option
-				v-for="option in sortBy"
-				:key="option.value"
-				:label="option.label"
-				:value="option.value"
-			>
-			</el-option>
-		</el-select>
+			<el-select v-model="filterBy.sortBy" @input="filter">
+				<el-option
+					class="product-filter-sortby"
+					v-for="option in sortBy"
+					:key="option.value"
+					:label="option.label"
+					:value="option.value"
+				>
+				</el-option>
+			</el-select>
+		</section>
 	</div>
 </template>
 
 <script>
 export default {
-	created() {
-		console.log('this.filterBy', this.filterBy)
-	},
+
 	data() {
 		return {
 			filterBy: {
@@ -58,6 +63,10 @@ export default {
 			],
 			sortBy: [
 				{
+					value: '',
+					label: 'Default'
+				},
+				{
 					value: 'Name',
 					label: 'Name'
 				},
@@ -65,10 +74,6 @@ export default {
 					value: 'Price',
 					label: 'Price'
 				},
-				{
-					value: 'Rating',
-					label: 'Rating'
-				}
 			],
 		}
 	},
