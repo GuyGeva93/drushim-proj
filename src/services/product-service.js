@@ -1,23 +1,25 @@
 import { keyBy } from 'lodash'
 export const productService = {
   query,
-  
+
 }
 
 const gProducts = _loadProducts()
 
-function query(filterBy = '') {
+function query(filterBy = { txt: '', category: '', sortBy: '' }) {
   console.log(filterBy)
-  const regex = new RegExp(filterBy, 'i')
-  const products = gProducts.filter(product => regex.test(product.category.name))
-  console.log('products', products)
+  const regex = new RegExp(filterBy.txt, 'i') //Ignore uppercase
+  let products = gProducts.filter(p => regex.test(p.name))
+  if (!filterBy.category) return products
+  products = products.filter(p => p.category.name === filterBy.category)
+  // products = gProducts.filter(product => regex.test(product.category.name))
+  // products = gProducts.filter(product => regex.test(product.category.name))
   return products
 }
 
 function sortProducts() {
 
 }
-
 
 function _loadProducts() {
   const products = require('../data/products.json')
@@ -28,6 +30,5 @@ function _loadProducts() {
       ...p, category: categoryById[p.categoryId]
     }
   }) // Insert new property to each product with his category name
-  console.log(productsToShow)
   return productsToShow
 }

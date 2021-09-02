@@ -1,9 +1,9 @@
 <template>
 	<div class="header">
-		<el-input placeholder="Search" v-model="search" @input="searchProduct"></el-input>
+		<el-input placeholder="Search" v-model="filterBy.txt" @input="filter"></el-input>
 		<button>Search</button>
 
-		<el-select v-model="categoryValue" placeholder="Select" @input="filter">
+		<el-select v-model="filterBy.category" placeholder="Select" @input="filter">
 			<el-option
 				v-for="category in categories"
 				:key="category.value"
@@ -13,7 +13,7 @@
 			</el-option>
 		</el-select>
 
-		<el-select v-model="sortByValue" placeholder="Select">
+		<el-select v-model="filterBy.sortBy" placeholder="Sort By">
 			<el-option
 				v-for="option in sortBy"
 				:key="option.value"
@@ -27,9 +27,17 @@
 
 <script>
 export default {
+	created() {
+		console.log('this.filterBy', this.filterBy)
+	},
 	data() {
 		return {
-			search: '',
+			filterBy: {
+				txt: '',
+				category: '',
+				sortBy: ''
+			},
+
 			categories: [
 				{
 					value: '',
@@ -48,7 +56,6 @@ export default {
 					label: 'Drones'
 				},
 			],
-			categoryValue: 'Category',
 			sortBy: [
 				{
 					value: 'Name',
@@ -63,17 +70,13 @@ export default {
 					label: 'Rating'
 				}
 			],
-			sortByValue: 'SortBy'
 		}
 	},
-  methods: {
-    searchProduct() {
-      console.log(this.search)
-    },
-		filter(){
-			this.$emit('filter', this.categoryValue)
+	methods: {
+		filter() {
+			this.$emit('filter', JSON.parse(JSON.stringify(this.filterBy)))
 		}
-  },
+	},
 
 }
 </script>

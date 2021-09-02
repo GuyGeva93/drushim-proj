@@ -9,7 +9,11 @@ export default new Vuex.Store({
   state: {
     products: [],
     categories: [],
-    filterBy: ''
+    filterBy: {
+      txt: '',
+      category: '',
+      sortBy: ''
+    }
   },
   getters: {
     products({ products }) { return products }

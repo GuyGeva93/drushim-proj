@@ -11,9 +11,9 @@ import productFilter from '../cmps/product-filter.vue'
 export default {
 
 	methods: {
-		async filter(filterBy) {
+		filter(filterBy) {
 			this.$store.commit({ type: 'setFilter', filterBy })
-			await this.$store.dispatch({ type: 'loadProducts' })
+			this.$store.dispatch({ type: 'loadProducts' })
 		}
 	},
 
